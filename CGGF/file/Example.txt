@@ -1,0 +1,10 @@
+POSITIVE rr vshi null a wd,d 1 1 2
+POSITIVE d vshi wd a null 0 0 0
+POSITIVE vshi n d wj a 0 0 1
+POSITIVE a n vshi wj null 0 0 0
+NEGATIVE rr d null vshi wd 1 0 1
+NEGATIVE rr a null n wd,d,vshi 1 1 3
+NEGATIVE rr n null wj wd,d,vshi,a 1 1 4
+NEGATIVE d a wd n vshi 0 0 1
+NEGATIVE d n wd wj vshi,a 0 0 2
+NEGATIVE vshi a d n null 0 0 0

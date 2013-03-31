@@ -1,0 +1,66 @@
+1)源代码结构
+algorithm 		基本的算法
+cg				概念图模块(*)
+classifier		分类器接口
+classifier.impl	分类器实现
+filter			过滤器接口
+filter.impl		过滤器实现(*)
+ne				命名实体接口
+ne.imple		命名实体实现
+nlp				自然语言处理模块
+rank			评级器接口
+rank.impl		评级器实现(*)
+se				搜索引擎接口
+se.impl			搜索引擎实现
+test			测试模块
+web				爬虫
+
+2)检索实例文件格式(file/SearchResult.txt)
+<Key Word>		: 关键词
+<Title>			: 标题
+<Snippet>		: 摘要
+<URL>			: 超链接地址
+<Page Rank>		: PageRank值
+
+3)测试用例文件格式
+<Human Filter>	: 人工过滤值
+<Human Rank>	: 人工评级值
+<Key Word>		: 关键词
+<Title>			: 标题
+<Snippet>		: 摘要
+<URL>			: 超链接地址
+<Page Rank>		: PageRank值
+
+4)句子文件格式(file/sentence.txt)
+<Orginal Sentence>	: 第一句原句
+<Orginal Sentence>	: 第二句原句
+
+5)词法句法分析文件格式(file/parsed.txt)
+<Orginal Sentence>		: 第一句原句
+<Part Of Speech>		: 第一句词法分词结果
+<Dependency Grammar>	: 第一句句法分析结果
+<Orginal Sentence>		: 第二句原句
+<Part Of Speech>		: 第二句词法分词结果
+<Dependency Grammar>	: 第二句句法分析结果
+
+6)候选实例文件格式(file/candidate.txt)
+<Orginal Sentence>		: 第一句原句
+<Part Of Speech>		: 第一句词法分词结果
+<Dependency Grammar>	: 第一句句法分析结果
+<Positive Candidate>	: 第一句候选正例
+<Negative Candidate>	: 第一句候选反例
+<Orginal Sentence>		: 第二句原句
+<Part Of Speech>		: 第二句词法分词结果
+<Dependency Grammar>	: 第二句句法分析结果
+<Positive Candidate>	: 第二句候选正例
+<Negative Candidate>	: 第二句候选反例
+
+7)NBC训练文件格式(file/example.txt)
+POSITIVE <Feature 1> <Feature 2> ...	: 第一个训练样例的类别及其各种特征的取值
+NEGATIVE <Feature 1> <Feature 2> ...	: 第二个训练样例的类别及其各种特征的取值
+
+8)NBC存档文件格式
+<Positive Factor>	: 正例数目
+<Negative Factor>	: 反例数目
+<F1-L1>:<Positive>:<Negative> <F1-L2>:<Positive>:<Negative> ...	: 第一种特征各个取值的统计信息
+<F2-L1>:<Positive>:<Negative> <F2-L2>:<Positive>:<Negative> ...	: 第二种特征各个取值的统计信息
