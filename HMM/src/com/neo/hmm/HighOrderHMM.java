@@ -126,8 +126,8 @@ public class HighOrderHMM implements HMM {
 				suffixPhrase.words[suffixPhrase.words.length - 1];
 			sequence.tokens[i - 1].status = lastWordInSuffixPhrase;
 			
-			Data data = mapList.get(i).get(suffixPhrase);
-			suffixPhrase = rightShiftPhrase(suffixPhrase, data.previousStatus);
+			Data step = mapList.get(i).get(suffixPhrase);
+			suffixPhrase = rightShiftPhrase(suffixPhrase, step.previousStatus);
 		}
 
 		return logProb;
@@ -169,8 +169,8 @@ public class HighOrderHMM implements HMM {
 		Phrase bestSuffixPhrase = null;
 		double bestLogProb = Double.NEGATIVE_INFINITY;
 		for (Phrase phrase : suffixPhraseStepMap.keySet()) {
-			Data data = suffixPhraseStepMap.get(phrase);
-			double logProb = data.logProb;
+			Data step = suffixPhraseStepMap.get(phrase);
+			double logProb = step.logProb;
 			double newLogProb = logProb + Math.log(
 					nGramLanguageModel.getProb(phrase, stopStatus));
 			if (newLogProb > bestLogProb) {

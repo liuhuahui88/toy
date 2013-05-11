@@ -2,6 +2,7 @@
 Aligner/bin/
 CGGF/bin/
 FileCluster/bin
+GLM/bin/
 HMM/bin/
 PassCode/bin/
 PCFG/bin/
