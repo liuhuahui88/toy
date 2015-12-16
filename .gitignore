@@ -5,6 +5,7 @@ CGGF/bin/
 FileCluster/bin
 GLM/bin/
 HMM/bin/
+LP/bin/
 PassCode/bin/
 PCFG/bin/
 Segmenter/bin/
